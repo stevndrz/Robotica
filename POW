@@ -1,0 +1,47 @@
+char hola[]={'h','o','l','a'};
+int val;
+int num;
+bool a;
+
+void setup() {
+Serial.begin(9600);
+}
+
+void loop() {
+
+if(Serial.available()>0){
+  num=Serial.read();
+  a = 1;
+  }
+
+switch (num) {
+  case '0':
+    val = 0;
+  break;
+    case '1':
+    val = 1;
+  break;
+    case '2':
+    val = 2;
+  break;
+    case '3':
+    val = 3;
+  break;
+    case '4':
+    val = 4;
+  break;
+    case '5':
+    val = 5;
+  break;
+    case '6':
+    val = 6;
+  break;
+  case '7':
+    val = 7;
+  break; 
+  }
+if(a==1){
+Serial.println(pow(2,val));
+a = 0;
+}
+}
